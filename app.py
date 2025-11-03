@@ -19,7 +19,6 @@ stopwords = list(STOP_WORDS)
 # Create the app object
 app = Flask(__name__)
 
-
 # creating a function for data cleaning
 from custom_tokenizer_function import CustomTokenizer
 
@@ -44,3 +43,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
