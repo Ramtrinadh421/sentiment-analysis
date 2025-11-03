@@ -1,74 +1,131 @@
 # Build + Deploy a Sentiment Analysis Model to classify Amazon Alexa Reviews into Positive & Negative
-An end-to-end toolkit on building a sentiment prediction model with a Jupyer notebook and deploying model pickle on local machine using flask. Our use case here is review classification of Amazon Alexa customer feedbacks into positive and negative. Dataset source is [here](https://www.kaggle.com/sid321axn/amazon-alexa-reviews).
 
-## YouTube Tutorial on this Project
-[![YouTube Tutorial](https://img.youtube.com/vi/lKAdxN0qrgk/0.jpg)](https://www.youtube.com/watch?v=lKAdxN0qrgk)
+An end-to-end toolkit on building a sentiment prediction model with a Jupyter notebook and deploying the model pickle on a local machine using Flask.  
+**Author:** Ram Trinadh
 
-## How the model works!
-![](https://github.com/skillcate/sentiment_analysis_with_sklearn_pipeline/blob/main/readme/model-functionality.gif)
+Our use case is review classification of Amazon Alexa customer feedback into positive and negative.
+
+**Dataset source:**  
+[Amazon Reviews (Kaggle)](https://www.kaggle.com/sid321axn/amazon-alexa-reviews)
+
+---
+
+## How the model works
+
+- Preprocess the Alexa reviews dataset.
+- Extract features and vectorize text.
+- Train a sentiment analysis pipeline using scikit-learn.
+- Export the model and deploy with a Flask web app.
+- Users can input their review and receive instant positive/negative classification.
+
+---
 
 ## Steps to run on Windows
 
-* Prerequisites: [Python 3.9](https://www.python.org/downloads/) (ensure Python is added to [PATH](https://medium.com/co-learning-lounge/how-to-download-install-python-on-windows-2021-44a707994013)) + [Git](https://www.markdownguide.org/basic-syntax/) Client
-* Open GIT CMD >> navigate to working directory >> Clone this Github Repo
+* **Prerequisites:** [Python 3.9](https://www.python.org/downloads/) (make sure Python is added to [PATH](https://medium.com/co-learning-lounge/how-to-download-install-python-on-windows-2021-44a707994013)), and [Git](https://git-scm.com/download/win) Client
 
-      git clone https://github.com/skillcate/sentiment_analysis_with_sklearn_pipeline.git  
-* Open Windows Powershell >> navigate to new working directory (cloned repo folder)
+* Open GIT CMD or Windows Terminal → navigate to working directory → Clone this Github Repo:
+    ```
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
 * Create a virtual environment
-  * install virtual environment
- 
+    * Install virtual environment:
+        ```
         pip install virtualenv
-        
-  * create virtual environment by the name ENV
-        
+        ```
+    * Create virtual environment by the name ENV:
+        ```
         virtualenv ENV
-        
-  * activate ENV
-
+        ```
+    * Activate ENV:
+        ```
         .\ENV\Scripts\activate
-        
-* Install project dependencies
+        ```
+* Install project dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+* Run the project:
+    ```
+    python app.py
+    ```
+    - Look for the local host address printed, e.g. `127.0.0.1:5000`
+    - Open this in your browser to use the app
 
-      pip install -r .\requirements.txt
-      
-* Run the project
+* To close → Go back to Terminal, type `ctrl+c`  
+* Deactivate Virtual Environment:
+    ```
+    deactivate
+    ```
 
-      python app.py
-      
-* Look for the local host address on Powershell screen, something like: 127.0.0.1:5000 >> Type it on your Web Browser >> Project shall load
-* Try out your Amazon Alexa test reviews and look for results
-* To close >> Go back to Powershell & type `ctrl+c` >> Deactivate Virtual Environment ENV
+---
 
-      deactivate
+## Steps to run on Mac
 
-
-### Steps to run on Mac
-
-* Prerequisites: [Python 3.9](https://www.python.org/downloads/)
-* Open Terminal >> navigate to working directory >> Clone this Github Repo
-
-      git clone https://github.com/skillcate/sentiment_analysis_with_sklearn_pipeline.git  
-* Navigate to new working directory (cloned repo folder)
+* **Prerequisites:** [Python 3.9](https://www.python.org/downloads/)
+* Open Terminal → navigate to working directory → Clone this Github Repo:
+    ```
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
 * Create a virtual environment
-  * install virtual environment
-
+    * Install virtual environment:
+        ```
         pip install virtualenv
-        
-  * create virtual environment by the name ENV
-  
-        virtualenv ENV  
-  * activate ENV
-        
+        ```
+    * Create virtual environment by the name ENV:
+        ```
+        virtualenv ENV
+        ```
+    * Activate ENV:
+        ```
         source ENV/bin/activate
-* Install project dependencies
+        ```
+* Install project dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+* Run the project:
+    ```
+    python app.py
+    ```
+    - Look for the local host address printed, e.g. `127.0.0.1:5000`
+    - Open this in your browser to use the app
 
-      pip install -r requirements.txt  
-* Run the project
+* To close → Go back to Terminal, type `ctrl+c`  
+* Deactivate Virtual Environment:
+    ```
+    deactivate
+    ```
 
-      python app.py
-      
-* Look for the local host address on Terminal screen, something like: 127.0.0.1:5000 >> Type it on your Web Browser >> Project shall load
-* Try out your Amazon Alexa test reviews and look for results
-* To close >> Go back to Terminal & type `ctrl+c` >> Deactivate Virtual Environment ENV
+---
 
-      deactivate
+## Project Structure
+
+├── app.py
+├── requirements.txt
+├── README.md
+├── notebooks/
+│ └── sentiment_analysis.ipynb
+├── static/
+└── templates/
+
+
+---
+
+## Troubleshooting
+
+- **Install/build errors:** Some libraries need MS C++ Build Tools. [Download here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+- **Insufficient storage:** Use a folder or drive with enough free space.
+- **Git not recognized:** Reinstall Git, select "Git from the command line and also from 3rd-party software" during setup.
+
+---
+
+## License
+
+This project is for educational purposes only.
+
+---
+
+**Project by Ram Trinadh**
