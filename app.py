@@ -10,19 +10,13 @@ import string
 from spacy.lang.en.stop_words import STOP_WORDS
 from flask import Flask, request, jsonify, render_template
 import nltk
-
 # Load trained Pipeline
 model = joblib.load('sentiment_model.pkl')
-
 stopwords = list(STOP_WORDS)
-
 # Create the app object
 app = Flask(__name__)
-
 # creating a function for data cleaning
 from custom_tokenizer_function import CustomTokenizer
-
-
 # Define predict function
 @app.route('/')
 def home():
