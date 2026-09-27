@@ -1,10 +1,8 @@
 import spacy
 nlp = spacy.load('en_core_web_sm')
-
 import string
 punct = string.punctuation
 # punct
-
 from spacy.lang.en.stop_words import STOP_WORDS
 stopwords = list(STOP_WORDS) # list of stopwords
 
